@@ -27,7 +27,7 @@ namespace maqueen{
         M1=0,
         //% blockId="M2" block="M2"
         M2=1,
-		//% blockId="M3" block="M3"
+        //% blockId="M3" block="M3"
         M3=3,
         //% blockId="M4" block="M4"
         M4=4
