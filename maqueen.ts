@@ -28,9 +28,9 @@ namespace maqueen{
         //% blockId="M2" block="M2"
         M2=1,
         //% blockId="M3" block="M3"
-        M3=3,
+        M3=2,
         //% blockId="M4" block="M4"
-        M4=4
+        M4=3
     }
     
     export enum Dir{
