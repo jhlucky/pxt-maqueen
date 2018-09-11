@@ -27,9 +27,9 @@ namespace maqueen{
         M1=0,
         //% blockId="M2" block="M2"
         M2=1,
-		//% blockId="M1" block="M3"
+		//% blockId="M3" block="M3"
         M3=3,
-        //% blockId="M2" block="M4"
+        //% blockId="M4" block="M4"
         M4=4
     }
     
@@ -173,12 +173,12 @@ namespace maqueen{
         if(motors==1){
             buf[0]=0x02;
         }
-		if(motors==2){
-			buf[0]=0x04;
-		}
-		if(motors==3){
-			buf[0]=0x06;
-		}
+        if(motors==2){
+            buf[0]=0x04;
+        }
+        if(motors==3){
+            buf[0]=0x06;
+        }
         buf[1]=0;
         buf[2]=0;
         pins.i2cWriteBuffer(0x10, buf);
@@ -194,10 +194,10 @@ namespace maqueen{
         pins.i2cWriteBuffer(0x10, buf);
         buf[0]=0x02;
         pins.i2cWriteBuffer(0x10, buf);
-		buf[0]=0x04;
-		pins.i2cWriteBuffer(0x10, buf);
-		buf[0]=0x06;
-		pins.i2cWriteBuffer(0x10, buf);
+        buf[0]=0x04;
+        pins.i2cWriteBuffer(0x10, buf);
+        buf[0]=0x06;
+        pins.i2cWriteBuffer(0x10, buf);
     }
     
     //% weight=20
