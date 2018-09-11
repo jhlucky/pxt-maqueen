@@ -26,7 +26,11 @@ namespace maqueen{
         //% blockId="M1" block="M1"
         M1=0,
         //% blockId="M2" block="M2"
-        M2=1
+        M2=1,
+		//% blockId="M1" block="M3"
+        M3=3,
+        //% blockId="M2" block="M4"
+        M4=4
     }
     
     export enum Dir{
@@ -147,6 +151,12 @@ namespace maqueen{
         if (index==1){
             buf[0]=0x02;
         }
+		if (index==2){
+			buf[0]=0x04;
+		}
+		if (index==3){
+			buf[0]=0x06;
+		}
         buf[1]=direction;
         buf[2]=speed;
         pins.i2cWriteBuffer(0x10, buf);
@@ -163,6 +173,12 @@ namespace maqueen{
         if(motors==1){
             buf[0]=0x02;
         }
+		if(motors==2){
+			buf[0]=0x04;
+		}
+		if(motors==3){
+			buf[0]=0x06;
+		}
         buf[1]=0;
         buf[2]=0;
         pins.i2cWriteBuffer(0x10, buf);
@@ -178,6 +194,10 @@ namespace maqueen{
         pins.i2cWriteBuffer(0x10, buf);
         buf[0]=0x02;
         pins.i2cWriteBuffer(0x10, buf);
+		buf[0]=0x04;
+		pins.i2cWriteBuffer(0x10, buf);
+		buf[0]=0x06;
+		pins.i2cWriteBuffer(0x10, buf);
     }
     
     //% weight=20
