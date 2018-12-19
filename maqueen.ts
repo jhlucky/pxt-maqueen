@@ -117,22 +117,18 @@ namespace maqueen{
     //% weight=95
     export function sensor(unit: PingUnit, maxCmDistance = 500): number {
         // send pulse
-        //pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
-        //pins.digitalWritePin(DigitalPin.P1, 0);
-        //control.waitMicros(2);
+        pins.setPull(DigitalPin.P1, PinPullMode.PullNone);
+        pins.digitalWritePin(DigitalPin.P1, 0);
+        basic.pause(2);
         pins.digitalWritePin(DigitalPin.P1, 1);
-        //control.waitMicros(10);
+        basic.pause(10);
         pins.digitalWritePin(DigitalPin.P1, 0);
 	    
-	//pins.setPull(DigitalPin.P2, PinPullMode.PullUp);
-        
-        
-        return 0;
         // read pulse
         let d = pins.pulseIn(DigitalPin.P2, PulseValue.High, maxCmDistance * 42);
         console.log("Distance: " + d/42);
         
-        basic.pause(50)
+        basic.pause(50);
 
         switch (unit) {
             case PingUnit.Centimeters: return d / 42;
