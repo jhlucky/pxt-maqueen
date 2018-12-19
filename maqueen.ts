@@ -121,7 +121,7 @@ namespace maqueen{
         pins.digitalWritePin(DigitalPin.P1, 0);
         basic.pause(2);
         pins.digitalWritePin(DigitalPin.P1, 1);
-        basic.pause(10);
+        basic.pause(1);
         pins.digitalWritePin(DigitalPin.P1, 0);
 	    
         // read pulse
